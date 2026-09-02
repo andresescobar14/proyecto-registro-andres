@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Validado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-4">
+    <!-- Contenedor centrado tipo tarjeta -->
+    <form class="max-w-xl mx-auto bg-white p-8 rounded-xl flex flex-col gap-4" id="formulario">
+      <h2 class="text-2xl font-bold text-center mb-4">Registro de Usuario</h2>
+
+      <div class="flex flex-col">
+        <label for="name" class="font-semibold mb-1">Nombre</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="name" name="nombre" placeholder="Ej. Juan" />
+      </div>
+      
+      <div class="flex flex-col">
+        <label for="lastName" class="font-semibold mb-1">Apellido</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="lastName" name="apellido" placeholder="Ej. Pérez" />
+      </div>
+      
+      <div class="flex flex-col">
+        <label for="email" class="font-semibold mb-1">Correo</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="email" id="email" name="correo" placeholder="correo@ejemplo.com" />
+      </div>
+      
+      <div class="flex flex-col">
+        <label for="phone" class="font-semibold mb-1">Teléfono</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="phone" name="telefono" placeholder="+584121234567" />
+      </div>
+      
+      <div class="flex flex-col">
+        <label for="password" class="font-semibold mb-1">Contraseña</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="password" id="password" name="contraseña" placeholder="Contraseña segura" />
+      </div>
+      
+      <div class="flex flex-col">
+        <label for="confirmPassword" class="font-semibold mb-1">Confirmar Contraseña</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="password" id="confirmPassword" name="confirmar_contraseña" placeholder="Repite tu contraseña" />
+      </div>
+
+      <div class="flex flex-col">
+        <label for="cedula" class="font-semibold mb-1">Cédula</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="cedula" name="cedula" placeholder="V-12345678">
+      </div>
+      
+      <!-- SELECT -->
+      <div class="flex flex-col">
+        <label for="pais" class="font-semibold mb-1">País</label>
+        <select class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" id="pais" name="pais">
+          <option value="">Seleccione un país</option>
+          <option value="venezuela">Venezuela</option>
+          <option value="colombia">Colombia</option>
+          <option value="peru">Perú</option>
+          <option value="chile">Chile</option>
+          <option value="argentina">Argentina</option>
+          <option value="mexico">México</option>
+          <option value="japon">Japón</option>
+        </select>
+      </div>
+
+      <div class="flex flex-col">
+        <label for="ciudad" class="font-semibold mb-1">Ciudad</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="ciudad" name="ciudad" placeholder="Ej. Maracaibo">
+      </div>
+      
+      <div class="flex flex-col">
+        <label for="direccion" class="font-semibold mb-1">Dirección</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="direccion" name="direccion" placeholder="Tu dirección exacta">
+      </div>
+      
+      <div class="flex flex-col">
+        <label for="date" class="font-semibold mb-1">Fecha de Nacimiento</label>
+        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="date" id="date" name="date">
+      </div>
+
+      <!-- RADIOS -->
+      <div class="flex flex-col border border-gray-200 p-4 rounded-lg bg-gray-50">
+        <p class="font-semibold mb-2">Género</p>
+        <div class="flex gap-4">
+          <label class="cursor-pointer flex items-center gap-1"><input type="radio" id="masculino" name="genero" value="masculino"> Masculino</label>
+          <label class="cursor-pointer flex items-center gap-1"><input type="radio" id="femenino" name="genero" value="femenino"> Femenino</label>
+          <label class="cursor-pointer flex items-center gap-1"><input type="radio" id="prefiero_no_decir" name="genero" value="Prefiero no decir"> Prefiero no decir</label>
+        </div>
+      </div>
+      
+      <div class="flex flex-col border border-gray-200 p-4 rounded-lg bg-gray-50">
+        <p class="font-semibold mb-2">Modalidad de Estudio</p>
+        <div class="flex flex-wrap gap-4">
+          <label class="cursor-pointer flex items-center gap-1">
+            <input type="radio" id="presencial" name="modalidad" value="presencial"> Presencial</label>
+          <label class="cursor-pointer flex items-center gap-1">
+            <input type="radio" id="online" name="modalidad" value="online"> Online</label>
+          <label class="cursor-pointer flex items-center gap-1">
+            <input type="radio" id="hibrido" name="modalidad" value="hibrido"> Híbrido</label>
+        </div>
+      </div>
+
+      <!-- CHECKBOXES MULTIPLES -->
+      <div class="flex flex-col border border-gray-200 p-4 rounded-lg bg-gray-50">
+        <p class="font-semibold mb-2">Áreas de interés</p>
+        <div class="grid grid-cols-2 gap-2">
+          <label class="cursor-pointer flex items-center gap-1">
+            <input type="checkbox" id="frontend" name="areas" value="frontend"> Frontend</label>
+          <label class="cursor-pointer flex items-center gap-1">
+            <input type="checkbox" id="backend" name="areas" value="backend"> Backend</label>
+          <label class="cursor-pointer flex items-center gap-1">
+            <input type="checkbox" id="ui_ux" name="areas" value="diseno_ui_ux"> Diseño UI/UX</label>
+          <label class="cursor-pointer flex items-center gap-1">
+            <input type="checkbox" id="data_science" name="areas" value="data_science"> Ciencia de Datos</label>
+          <label class="cursor-pointer flex items-center gap-1">
+            <input type="checkbox" id="InteligenciaArtificial" name="areas" value="inteligencia_artificial"> Inteligencia Artificial</label>
+        </div>
+      </div>
+      
+      <!-- CHECKBOX TÉRMINOS -->
+      <div class="mt-2">
+        <label class="cursor-pointer flex items-center gap-2 font-semibold">
+          <input type="checkbox" id="terminos" name="terminos" value="aceptado" class="w-4 h-4">
+          Acepto los términos y condiciones
+        </label>
+      </div>
+      
+      <!-- CONTENEDOR DE ERRORES -->
+      <div id="errors" class=" empty:hidden bg-red-50 text-red-600 rounded-lg p-4 font-medium"></div>
+      
+      <input type="submit" value="Enviar Formulario" class="mt-4 p-3 bg-blue-600 hover:bg-blue-700 transition duration-300 font-bold rounded-lg text-white cursor-pointer"/>
+    </form>
+
+    <script>
+      function ValidarCedula(cedula){
+        const cedulaRegex = /^(V-|E-)?\d{6,9}$/i;
+        return cedulaRegex.test(cedula);
+      }
+
+      let nombreRegex = /^[a-zA-ZñÑáÁéÉíÍóÓúÚ\s']+$/i; 
+      let correoRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      let passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&\.])[A-Za-z\d@$!%*#?&\.]{8,50}$/;
+      let telefonoRegex = /^\+\d{9,15}$/;
+      let ciudadRegex = /^[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]+$/i;
+      let direccionRegex = /^[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s.,#-]+$/i;
+      let dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+
+      document.addEventListener("DOMContentLoaded", () => {
+        let formulario = document.querySelector("form");
+        
+        formulario.addEventListener("submit", (evento) => {
+          evento.preventDefault(); 
+          
+          let errors = [];
+          let parrafo = document.getElementById("errors"); 
+          parrafo.innerHTML = ""; 
+
+          // --- CAPTURA DE TEXTOS ---
+          let valorNombre = document.getElementById("name").value.trim();
+          let valorApellido = document.getElementById("lastName").value.trim();
+          let valorCorreo = document.getElementById("email").value.trim();
+          let valorTelefono = document.getElementById("phone").value.trim();
+          let valorContrasena = document.getElementById("password").value.trim();
+          let valorConfirmarContrasena = document.getElementById("confirmPassword").value.trim();
+          let valorCedula = document.getElementById("cedula").value.trim();
+          let valorCiudad = document.getElementById("ciudad").value.trim();
+          let valorDireccion = document.getElementById("direccion").value.trim();
+          let valorDate = document.getElementById("date").value.trim();
+          let valorPais = document.getElementById("pais").value;
+          
+          // --- CAPTURA DE RADIOS Y CHECKBOXES ---
+          let generoSeleccionado = document.querySelector('input[name="genero"]:checked');
+          let modalidadSeleccionada = document.querySelector('input[name="modalidad"]:checked');
+          let areasSeleccionadas = document.querySelectorAll('input[name="areas"]:checked');
+          let terminosAceptados = document.getElementById("terminos").checked;
+
+          // --- VALIDACIONES ---
+          if (!nombreRegex.test(valorNombre)) errors.push("El nombre no es válido.");
+          if (!nombreRegex.test(valorApellido)) errors.push("El apellido no es válido.");
+          if (!correoRegex.test(valorCorreo)) errors.push("El correo no es válido.");
+          if (!telefonoRegex.test(valorTelefono)) errors.push("El teléfono no es válido.");
+          if (!passwordRegex.test(valorContrasena)) errors.push("La contraseña no es válida (Mínimo 8 caracteres, 1 mayúscula, 1 minúscula, 1 número, 1 carácter especial).");
+          if (valorContrasena !== valorConfirmarContrasena) errors.push("Las contraseñas no coinciden.");
+          if (!ValidarCedula(valorCedula)) errors.push("La cédula no es válida.");
+          if (valorPais === "") errors.push("Debes seleccionar un país.");
+          if (!ciudadRegex.test(valorCiudad)) errors.push("La ciudad no es válida.");
+          if (!direccionRegex.test(valorDireccion)) errors.push("La dirección no es válida.");
+          
+          // --- VALIDACIÓN DE EDAD (> 16 AÑOS) ---
+          if (!dateRegex.test(valorDate)) {
+            errors.push("Debes ingresar una fecha de nacimiento válida.");
+          } else {
+            // Obtenemos la fecha que ingresó el usuario y la fecha de hoy
+            let fechaNacimiento = new Date(valorDate);
+            let fechaActual = new Date();
+            
+            // Calculamos la diferencia inicial de años
+            let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+            let diferenciaMeses = fechaActual.getMonth() - fechaNacimiento.getMonth();
+            
+            // Si el mes actual es anterior al mes de nacimiento, 
+            // o si estamos en el mismo mes pero el día de hoy es anterior al de su cumpleaños,
+            // significa que aún no los ha cumplido este año, así que restamos 1 a la edad.
+            if (diferenciaMeses < 0 || (diferenciaMeses === 0 && fechaActual.getDate() < fechaNacimiento.getDate())) {
+              edad--;
+            }
+
+            // Verificamos que tenga al menos 16 cumplidos
+            if (edad < 16) {
+              errors.push("Debes ser mayor de 16 años para registrarte.");
+            }
+          }
+
+          if (!generoSeleccionado) errors.push("Debes seleccionar un género.");
+          if (!modalidadSeleccionada) errors.push("Debes seleccionar una modalidad de estudio.");
+          if (areasSeleccionadas.length === 0) errors.push("Debes seleccionar al menos un área de interés.");
+          if (!terminosAceptados) errors.push("Debes aceptar los términos y condiciones.");
+
+          // --- MOSTRAR RESULTADOS ---
+          if(errors.length > 0){
+            errors.forEach((error) => {
+              let mensajeHTML = document.createElement("p");
+              mensajeHTML.innerHTML = "• " + error;
+              parrafo.appendChild(mensajeHTML);
+            });
+          
+          } else {
+            // Se usa classList para quitar los estilos de error y poner los de éxito
+            parrafo.className = "bg-green-50 text-green-700 rounded-lg p-4 font-bold text-center";
+            parrafo.innerHTML = "✅ Formulario enviado exitosamente";
+            formulario.reset(); 
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
