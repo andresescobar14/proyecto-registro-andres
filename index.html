@@ -1,235 +1,57 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario Validado</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-gray-100 p-4">
-    <!-- Contenedor centrado tipo tarjeta -->
-    <form class="max-w-xl mx-auto bg-white p-8 rounded-xl flex flex-col gap-4" id="formulario">
-      <h2 class="text-2xl font-bold text-center mb-4">Registro de Usuario</h2>
-
-      <div class="flex flex-col">
-        <label for="name" class="font-semibold mb-1">Nombre</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="name" name="nombre" placeholder="Ej. Juan" />
-      </div>
-      
-      <div class="flex flex-col">
-        <label for="lastName" class="font-semibold mb-1">Apellido</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="lastName" name="apellido" placeholder="Ej. Pérez" />
-      </div>
-      
-      <div class="flex flex-col">
-        <label for="email" class="font-semibold mb-1">Correo</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="email" id="email" name="correo" placeholder="correo@ejemplo.com" />
-      </div>
-      
-      <div class="flex flex-col">
-        <label for="phone" class="font-semibold mb-1">Teléfono</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="phone" name="telefono" placeholder="+584121234567" />
-      </div>
-      
-      <div class="flex flex-col">
-        <label for="password" class="font-semibold mb-1">Contraseña</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="password" id="password" name="contraseña" placeholder="Contraseña segura" />
-      </div>
-      
-      <div class="flex flex-col">
-        <label for="confirmPassword" class="font-semibold mb-1">Confirmar Contraseña</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="password" id="confirmPassword" name="confirmar_contraseña" placeholder="Repite tu contraseña" />
-      </div>
-
-      <div class="flex flex-col">
-        <label for="cedula" class="font-semibold mb-1">Cédula</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="cedula" name="cedula" placeholder="V-12345678">
-      </div>
-      
-      <!-- SELECT -->
-      <div class="flex flex-col">
-        <label for="pais" class="font-semibold mb-1">País</label>
-        <select class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" id="pais" name="pais">
-          <option value="">Seleccione un país</option>
-          <option value="venezuela">Venezuela</option>
-          <option value="colombia">Colombia</option>
-          <option value="peru">Perú</option>
-          <option value="chile">Chile</option>
-          <option value="argentina">Argentina</option>
-          <option value="mexico">México</option>
-          <option value="japon">Japón</option>
-        </select>
-      </div>
-
-      <div class="flex flex-col">
-        <label for="ciudad" class="font-semibold mb-1">Ciudad</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="ciudad" name="ciudad" placeholder="Ej. Maracaibo">
-      </div>
-      
-      <div class="flex flex-col">
-        <label for="direccion" class="font-semibold mb-1">Dirección</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="text" id="direccion" name="direccion" placeholder="Tu dirección exacta">
-      </div>
-      
-      <div class="flex flex-col">
-        <label for="date" class="font-semibold mb-1">Fecha de Nacimiento</label>
-        <input class="border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:border-blue-500" type="date" id="date" name="date">
-      </div>
-
-      <!-- RADIOS -->
-      <div class="flex flex-col border border-gray-200 p-4 rounded-lg bg-gray-50">
-        <p class="font-semibold mb-2">Género</p>
-        <div class="flex gap-4">
-          <label class="cursor-pointer flex items-center gap-1"><input type="radio" id="masculino" name="genero" value="masculino"> Masculino</label>
-          <label class="cursor-pointer flex items-center gap-1"><input type="radio" id="femenino" name="genero" value="femenino"> Femenino</label>
-          <label class="cursor-pointer flex items-center gap-1"><input type="radio" id="prefiero_no_decir" name="genero" value="Prefiero no decir"> Prefiero no decir</label>
-        </div>
-      </div>
-      
-      <div class="flex flex-col border border-gray-200 p-4 rounded-lg bg-gray-50">
-        <p class="font-semibold mb-2">Modalidad de Estudio</p>
-        <div class="flex flex-wrap gap-4">
-          <label class="cursor-pointer flex items-center gap-1">
-            <input type="radio" id="presencial" name="modalidad" value="presencial"> Presencial</label>
-          <label class="cursor-pointer flex items-center gap-1">
-            <input type="radio" id="online" name="modalidad" value="online"> Online</label>
-          <label class="cursor-pointer flex items-center gap-1">
-            <input type="radio" id="hibrido" name="modalidad" value="hibrido"> Híbrido</label>
-        </div>
-      </div>
-
-      <!-- CHECKBOXES MULTIPLES -->
-      <div class="flex flex-col border border-gray-200 p-4 rounded-lg bg-gray-50">
-        <p class="font-semibold mb-2">Áreas de interés</p>
-        <div class="grid grid-cols-2 gap-2">
-          <label class="cursor-pointer flex items-center gap-1">
-            <input type="checkbox" id="frontend" name="areas" value="frontend"> Frontend</label>
-          <label class="cursor-pointer flex items-center gap-1">
-            <input type="checkbox" id="backend" name="areas" value="backend"> Backend</label>
-          <label class="cursor-pointer flex items-center gap-1">
-            <input type="checkbox" id="ui_ux" name="areas" value="diseno_ui_ux"> Diseño UI/UX</label>
-          <label class="cursor-pointer flex items-center gap-1">
-            <input type="checkbox" id="data_science" name="areas" value="data_science"> Ciencia de Datos</label>
-          <label class="cursor-pointer flex items-center gap-1">
-            <input type="checkbox" id="InteligenciaArtificial" name="areas" value="inteligencia_artificial"> Inteligencia Artificial</label>
-        </div>
-      </div>
-      
-      <!-- CHECKBOX TÉRMINOS -->
-      <div class="mt-2">
-        <label class="cursor-pointer flex items-center gap-2 font-semibold">
-          <input type="checkbox" id="terminos" name="terminos" value="aceptado" class="w-4 h-4">
-          Acepto los términos y condiciones
-        </label>
-      </div>
-      
-      <!-- CONTENEDOR DE ERRORES -->
-      <div id="errors" class=" empty:hidden bg-red-50 text-red-600 rounded-lg p-4 font-medium"></div>
-      
-      <input type="submit" value="Enviar Formulario" class="mt-4 p-3 bg-blue-600 hover:bg-blue-700 transition duration-300 font-bold rounded-lg text-white cursor-pointer"/>
-    </form>
-
-    <script>
-      function ValidarCedula(cedula){
-        const cedulaRegex = /^(V-|E-)?\d{6,9}$/i;
-        return cedulaRegex.test(cedula);
-      }
-
-      let nombreRegex = /^[a-zA-ZñÑáÁéÉíÍóÓúÚ\s']+$/i; 
-      let correoRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      let passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*#?&\.])[A-Za-z\d@$!%*#?&\.]{8,50}$/;
-      let telefonoRegex = /^\+\d{9,15}$/;
-      let ciudadRegex = /^[a-zA-ZñÑáÁéÉíÍóÓúÚ\s]+$/i;
-      let direccionRegex = /^[a-zA-Z0-9ñÑáÁéÉíÍóÓúÚ\s.,#-]+$/i;
-      let dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-
-      document.addEventListener("DOMContentLoaded", () => {
-        let formulario = document.querySelector("form");
-        
-        formulario.addEventListener("submit", (evento) => {
-          evento.preventDefault(); 
-          
-          let errors = [];
-          let parrafo = document.getElementById("errors"); 
-          parrafo.innerHTML = ""; 
-
-          // --- CAPTURA DE TEXTOS ---
-          let valorNombre = document.getElementById("name").value.trim();
-          let valorApellido = document.getElementById("lastName").value.trim();
-          let valorCorreo = document.getElementById("email").value.trim();
-          let valorTelefono = document.getElementById("phone").value.trim();
-          let valorContrasena = document.getElementById("password").value.trim();
-          let valorConfirmarContrasena = document.getElementById("confirmPassword").value.trim();
-          let valorCedula = document.getElementById("cedula").value.trim();
-          let valorCiudad = document.getElementById("ciudad").value.trim();
-          let valorDireccion = document.getElementById("direccion").value.trim();
-          let valorDate = document.getElementById("date").value.trim();
-          let valorPais = document.getElementById("pais").value;
-          
-          // --- CAPTURA DE RADIOS Y CHECKBOXES ---
-          let generoSeleccionado = document.querySelector('input[name="genero"]:checked');
-          let modalidadSeleccionada = document.querySelector('input[name="modalidad"]:checked');
-          let areasSeleccionadas = document.querySelectorAll('input[name="areas"]:checked');
-          let terminosAceptados = document.getElementById("terminos").checked;
-
-          // --- VALIDACIONES ---
-          if (!nombreRegex.test(valorNombre)) errors.push("El nombre no es válido.");
-          if (!nombreRegex.test(valorApellido)) errors.push("El apellido no es válido.");
-          if (!correoRegex.test(valorCorreo)) errors.push("El correo no es válido.");
-          if (!telefonoRegex.test(valorTelefono)) errors.push("El teléfono no es válido.");
-          if (!passwordRegex.test(valorContrasena)) errors.push("La contraseña no es válida (Mínimo 8 caracteres, 1 mayúscula, 1 minúscula, 1 número, 1 carácter especial).");
-          if (valorContrasena !== valorConfirmarContrasena) errors.push("Las contraseñas no coinciden.");
-          if (!ValidarCedula(valorCedula)) errors.push("La cédula no es válida.");
-          if (valorPais === "") errors.push("Debes seleccionar un país.");
-          if (!ciudadRegex.test(valorCiudad)) errors.push("La ciudad no es válida.");
-          if (!direccionRegex.test(valorDireccion)) errors.push("La dirección no es válida.");
-          
-          // --- VALIDACIÓN DE EDAD (> 16 AÑOS) ---
-          if (!dateRegex.test(valorDate)) {
-            errors.push("Debes ingresar una fecha de nacimiento válida.");
-          } else {
-            // Obtenemos la fecha que ingresó el usuario y la fecha de hoy
-            let fechaNacimiento = new Date(valorDate);
-            let fechaActual = new Date();
-            
-            // Calculamos la diferencia inicial de años
-            let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
-            let diferenciaMeses = fechaActual.getMonth() - fechaNacimiento.getMonth();
-            
-            // Si el mes actual es anterior al mes de nacimiento, 
-            // o si estamos en el mismo mes pero el día de hoy es anterior al de su cumpleaños,
-            // significa que aún no los ha cumplido este año, así que restamos 1 a la edad.
-            if (diferenciaMeses < 0 || (diferenciaMeses === 0 && fechaActual.getDate() < fechaNacimiento.getDate())) {
-              edad--;
-            }
-
-            // Verificamos que tenga al menos 16 cumplidos
-            if (edad < 16) {
-              errors.push("Debes ser mayor de 16 años para registrarte.");
-            }
-          }
-
-          if (!generoSeleccionado) errors.push("Debes seleccionar un género.");
-          if (!modalidadSeleccionada) errors.push("Debes seleccionar una modalidad de estudio.");
-          if (areasSeleccionadas.length === 0) errors.push("Debes seleccionar al menos un área de interés.");
-          if (!terminosAceptados) errors.push("Debes aceptar los términos y condiciones.");
-
-          // --- MOSTRAR RESULTADOS ---
-          if(errors.length > 0){
-            errors.forEach((error) => {
-              let mensajeHTML = document.createElement("p");
-              mensajeHTML.innerHTML = "• " + error;
-              parrafo.appendChild(mensajeHTML);
-            });
-          
-          } else {
-            // Se usa classList para quitar los estilos de error y poner los de éxito
-            parrafo.className = "bg-green-50 text-green-700 rounded-lg p-4 font-bold text-center";
-            parrafo.innerHTML = "✅ Formulario enviado exitosamente";
-            formulario.reset(); 
-          }
-        });
-      });
-    </script>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f5f2" />
+  <meta name="description" content="Registro de estudiantes por pasos. Una experiencia accesible y responsive creada por Andres Escobar." />
+  <title>Nexo · Tu próxima etapa</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#registro">Ir al registro</a>
+  <header class="site-header"><a class="brand" href="./" aria-label="Nexo, inicio"><span class="brand-symbol" aria-hidden="true">n.</span> nexo<span class="brand-caption">EL SIGUIENTE PASO.</span></a><a class="author-link" href="https://github.com/andresescobar14/proyecto-registro-andres" target="_blank" rel="noopener noreferrer">Un proyecto de Andres <span aria-hidden="true">↗</span></a></header>
+  <main class="layout">
+    <aside class="intro" aria-labelledby="intro-title">
+      <span class="eyebrow"><i aria-hidden="true"></i> ADMISIONES ABIERTAS · TU FUTURO EMPIEZA HOY</span>
+      <h1 id="intro-title">Lo que viene<br />empieza <em>contigo.</em></h1>
+      <p class="intro-description">Tus ideas merecen un lugar donde crecer.<br />Da el primer paso hacia tu próxima etapa.</p>
+      <div class="orbit-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><div class="art-center">n<span>✳</span></div><span class="art-label">APRENDE. CONECTA. EVOLUCIONA.</span><span class="art-coordinate">N / 001</span></div>
+      <div class="intro-bottom"><span class="intro-star" aria-hidden="true">✳</span><p>Un comienzo sencillo.<br /><strong>Un mundo de posibilidades.</strong></p><span class="intro-index">01 — 03</span></div>
+    </aside>
+    <section class="form-panel" id="registro" aria-labelledby="form-title">
+      <div class="panel-top"><span class="eyebrow">TU NUEVO COMIENZO</span><span id="step-count">PASO 01 / 03</span></div>
+      <h2 id="form-title">Hagamos espacio<br />para tu talento.</h2><p class="form-description">Cuéntanos un poco sobre ti. Será solo un momento.</p>
+      <ol class="steps" aria-label="Progreso del registro"><li aria-current="step"><span>01</span> Tu perfil</li><li><span>02</span> Tu cuenta</li><li><span>03</span> Tus intereses</li></ol>
+      <p class="demo-note">Demo interactiva · Tus datos no se envían ni se guardan.</p>
+      <form id="registration-form" novalidate aria-label="Registro de estudiantes">
+        <p class="error-summary" id="error-summary" role="alert" hidden></p>
+        <fieldset class="step-panel" data-step="0"><legend>Empecemos por conocerte.</legend>
+          <div class="field-row"><div class="field"><label for="name">Nombre</label><input id="name" name="name" autocomplete="given-name" maxlength="60" required placeholder="Tu nombre" /></div><div class="field"><label for="lastName">Apellido</label><input id="lastName" name="lastName" autocomplete="family-name" maxlength="60" required placeholder="Tu apellido" /></div></div>
+          <div class="field"><label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="hola@tucorreo.com" /></div>
+          <div class="field-row"><div class="field"><label for="phone">Teléfono</label><input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="20" required placeholder="+58 412 123 4567" /></div><div class="field"><label for="cedula">Cédula</label><input id="cedula" name="cedula" maxlength="11" required placeholder="V-12345678" /></div></div>
+          <div class="field-row"><div class="field"><label for="birthDate">Fecha de nacimiento</label><input id="birthDate" name="birthDate" type="date" autocomplete="bday" required aria-describedby="birth-hint" /><small id="birth-hint">Debes tener al menos 16 años.</small></div><div class="field"><label for="gender">Género <span>(opcional)</span></label><select id="gender" name="gender"><option value="">Prefiero no decir</option><option>Femenino</option><option>Masculino</option><option>No binario</option></select></div></div>
+        </fieldset>
+        <fieldset class="step-panel" data-step="1" hidden><legend>Un acceso a tu medida.</legend>
+          <div class="field"><label for="password">Contraseña</label><div class="password-field"><input id="password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="72" required aria-describedby="password-hint strength-label" placeholder="Crea una contraseña" /><button type="button" data-password-toggle="password" aria-label="Mostrar contraseña" aria-pressed="false">Ver</button></div><div class="strength-track" aria-hidden="true"><span id="strength-fill"></span></div><small id="password-hint">8 caracteres, mayúscula, minúscula, número y símbolo.</small><small id="strength-label" role="status">Seguridad de la contraseña</small></div>
+          <div class="field"><label for="confirmPassword">Confirmar contraseña</label><div class="password-field"><input id="confirmPassword" name="confirmPassword" type="password" autocomplete="new-password" maxlength="72" required placeholder="Escríbela una vez más" /><button type="button" data-password-toggle="confirmPassword" aria-label="Mostrar confirmación de contraseña" aria-pressed="false">Ver</button></div></div>
+          <div class="field-row"><div class="field"><label for="country">País</label><select id="country" name="country" autocomplete="country-name" required><option value="">Selecciona tu país</option><option>Venezuela</option><option>Colombia</option><option>Perú</option><option>Chile</option><option>Argentina</option><option>México</option><option>España</option><option>Japón</option><option>Otro</option></select></div><div class="field"><label for="city">Ciudad</label><input id="city" name="city" autocomplete="address-level2" maxlength="100" required placeholder="Tu ciudad" /></div></div>
+          <div class="field"><label for="address">Dirección</label><input id="address" name="address" autocomplete="street-address" maxlength="180" required placeholder="Calle, número y sector" /></div>
+        </fieldset>
+        <fieldset class="step-panel" data-step="2" hidden><legend>Elige tu propia dirección.</legend>
+          <fieldset class="choice-group"><legend>¿Cómo prefieres aprender?</legend><div class="modality-options"><label class="choice"><input type="radio" name="modality" value="Presencial" /><span><b aria-hidden="true">⌂</b>Presencial</span></label><label class="choice"><input type="radio" name="modality" value="Online" /><span><b aria-hidden="true">↗</b>Online</span></label><label class="choice"><input type="radio" name="modality" value="Híbrido" /><span><b aria-hidden="true">◎</b>Híbrido</span></label></div><p id="modality-error" class="field-error" hidden></p></fieldset>
+          <fieldset class="choice-group"><legend>¿Qué despierta tu curiosidad?</legend><p class="group-hint">Puedes elegir más de una opción.</p><div class="interest-options"><label><input type="checkbox" name="interests" value="Frontend" /><span>↗ Frontend</span></label><label><input type="checkbox" name="interests" value="Backend" /><span>⌘ Backend</span></label><label><input type="checkbox" name="interests" value="Diseño UI/UX" /><span>✳ Diseño UI/UX</span></label><label><input type="checkbox" name="interests" value="Ciencia de datos" /><span>◈ Ciencia de datos</span></label><label><input type="checkbox" name="interests" value="Inteligencia artificial" /><span>✧ Inteligencia artificial</span></label></div><p id="interests-error" class="field-error" hidden></p></fieldset>
+          <div class="terms"><label><input id="terms" name="terms" type="checkbox" required /><span>Entiendo que este es un ejercicio de validación y que no se creará una cuenta real.</span></label><p id="terms-error" class="field-error" hidden></p></div>
+        </fieldset>
+        <div class="form-actions"><button id="back-button" class="button-back" type="button" hidden>← Volver</button><button id="next-button" class="button-primary" type="submit">Continuar <span aria-hidden="true">↗</span></button></div>
+      </form>
+      <section class="success-panel" id="success-panel" hidden aria-labelledby="success-title" tabindex="-1"><span class="success-icon" aria-hidden="true">✓</span><span class="eyebrow">TODO EN ORDEN</span><h2 id="success-title">¡Listo, <span id="success-name"></span>!</h2><p>Tu registro pasó todas las validaciones. Este es un ejercicio interactivo: no se ha creado una cuenta ni se han enviado o guardado tus datos.</p><button id="restart-button" type="button" class="button-primary">Volver a empezar <span aria-hidden="true">↗</span></button></section>
+      <div class="panel-footer"><span aria-hidden="true">◇</span> Tú decides el camino. Nosotros hacemos fácil el comienzo.</div>
+      <noscript><p>Activa JavaScript para completar esta demostración de registro.</p></noscript>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© <span id="year">2026</span> Nexo · Hecho para dar el siguiente paso.</span><span>Diseño & código por <a href="https://github.com/andresescobar14">Andres Escobar ↗</a></span></footer>
+</body>
 </html>
